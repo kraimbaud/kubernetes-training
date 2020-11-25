@@ -1,5 +1,5 @@
 resource "google_compute_instance" "default" {
-    name = var.
+    name = var.vm_name
     machine_type = "f1-micro"
     zone = "europe-west1-b"
 

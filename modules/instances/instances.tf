@@ -1,5 +1,5 @@
 resource "google_compute_instance" "default" {
-    name = "master-1"
+    name = var.vm_name
     machine_type = "f1-micro"
     zone = "europe-west1-b"
 
@@ -24,7 +24,7 @@ resource "google_compute_instance" "default" {
 
 resource "google_compute_firewall" "http-server" {
     name = "dafault-allow-http-terraform"
-    network = "dafault"
+    network = "default"
 
     allow {
         protocol = "tcp"

@@ -10,8 +10,8 @@ resource "google_compute_instance" "default" {
     }
 
     network_interface {
-        network = google_compute_network.vpc_network.name
-
+        network = var.network
+        
         access_config {
             // Include this section to give the VM an external IP address
         }

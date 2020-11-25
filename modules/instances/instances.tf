@@ -10,7 +10,7 @@ resource "google_compute_instance" "default" {
     }
 
     network_interface {
-        network = "default"
+        network = google_compute_network.vpc_network.name
 
         access_config {
             // Include this section to give the VM an external IP address
@@ -19,5 +19,5 @@ resource "google_compute_instance" "default" {
 
     metadata_startup_script = "sudo apt-get update && sudo apt-get install -y vim zsh"
 
-    tags = ["http-server"]
+    tags = ["node"]
 }

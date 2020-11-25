@@ -1,5 +1,5 @@
 resource "google_compute_instance" "default" {
-    name = var.vm_name
+    name = var.
     machine_type = "f1-micro"
     zone = "europe-west1-b"
 
@@ -9,6 +9,15 @@ resource "google_compute_instance" "default" {
         }
     }
 
+    network_interface {
+        network = "default"
+
+        access_config {
+            // Include this section to give the VM an external IP address
+        }
+    }
+
     metadata_startup_script = "sudo apt-get update && sudo apt-get install -y vim zsh"
+
     tags = ["http-server"]
 }

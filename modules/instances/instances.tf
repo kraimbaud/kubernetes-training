@@ -9,29 +9,6 @@ resource "google_compute_instance" "default" {
         }
     }
 
-    network_interface {
-        network = "default"
-
-        access_config {
-            // Include this section to give the VM an external IP address
-        }
-    }
-
     metadata_startup_script = "sudo apt-get update && sudo apt-get install -y vim zsh"
-
     tags = ["http-server"]
-}
-
-resource "google_compute_firewall" "http-server" {
-    name = "dafault-allow-http-terraform"
-    network = "default"
-
-    allow {
-        protocol = "tcp"
-        ports = ["80", "22"]
-    }
-
-    // Allow traffic from everywhere to instances with an http-server tag
-    source_ranges = ["0.0.0.0/0"]
-    target_tags = ["http-server"]
 }

@@ -11,7 +11,6 @@ resource "google_compute_instance" "default" {
 
     network_interface {
         network = var.network
-        
         access_config {
             // Include this section to give the VM an external IP address
         }
@@ -19,7 +18,6 @@ resource "google_compute_instance" "default" {
 
     provisioner "remote-exec" {
         script = var.script_path
-
         connection {
             type        = "ssh"
             host        = var.ip_address

@@ -15,3 +15,7 @@ variable "zone" {
   description = "The zones to host the cluster in."
   default     = ["europe-west1-b", "europe-west1-c", "europe-west1-d"]
 }
+
+variable "script" {
+  default = "./scripts/bootstrap.sh"
+}

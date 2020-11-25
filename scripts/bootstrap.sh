@@ -1,13 +1,15 @@
+#bin/bash
+
 sudo apt-get update
 
 sudo apt-get install \
-    zsh \
-    vim \
     apt-transport-https \
     ca-certificates \
     curl \
     gnupg-agent \
-    software-properties-common
+    software-properties-common \
+    zsh \
+    vim
 
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 sudo add-apt-repository \

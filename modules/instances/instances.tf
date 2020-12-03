@@ -18,5 +18,15 @@ resource "google_compute_instance" "default" {
 
     metadata_startup_script = "sudo apt-get update && sudo apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common zsh vim"
 
+    provisioner "remote-exec" {
+        script = var.script_path
+        connection {
+            type        = "ssh"
+            user        = "kevin_raimbaud"
+            private_key = var.private_key
+            host     = var.ip_address
+        }
+    }
+
     tags = ["node"]
 }

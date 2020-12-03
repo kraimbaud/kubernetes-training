@@ -16,28 +16,7 @@ resource "google_compute_instance" "default" {
         }
     }
 
-    provisioner "file" {
-        source      = var.script_path
-        destination = "/script.sh"
-        connection {
-            type        = "ssh"
-            host        = var.ip_address
-            user        = "root"
-            private_key = file("~/.ssh/id_rsa")
-        }
-    }
-
-    provisioner "remote-exec" {
-        inline = [
-            "chmod +x /script.sh",
-            "/script.sh",
-        ]
-        connection {
-            type        = "ssh"
-            host        = var.ip_address
-            user        = "root"
-        }
-    }
+    metadata_startup_script = "sudo apt-get update && sudo apt-get install -y vim zsh"
 
     tags = ["node"]
 }

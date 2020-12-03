@@ -16,7 +16,7 @@ resource "google_compute_instance" "default" {
         }
     }
 
-    metadata_startup_script = "sudo apt-get update && sudo apt-get install -y vim zsh"
+    metadata_startup_script = "sudo apt-get update && sudo apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common zsh vim"
 
     tags = ["node"]
 }

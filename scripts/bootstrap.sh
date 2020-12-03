@@ -16,7 +16,7 @@ sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/debian \
    $(lsb_release -cs) \
    stable"
-sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo apt-get update && sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list

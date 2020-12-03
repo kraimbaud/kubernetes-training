@@ -1,6 +1,6 @@
 resource "google_compute_instance" "default" {
     name = var.vm_name
-    machine_type = "f1-micro"
+    machine_type = "e2-standard-2"
     zone = "europe-west1-b"
 
     boot_disk {
@@ -16,8 +16,22 @@ resource "google_compute_instance" "default" {
         }
     }
 
+    provisioner "file" {
+        source      = var.script_path
+        destination = "/script.sh"
+        connection {
+            type        = "ssh"
+            host        = var.ip_address
+            user        = "root"
+            private_key = file("~/.ssh/id_rsa")
+        }
+    }
+
     provisioner "remote-exec" {
-        script = var.script_path
+        inline = [
+            "chmod +x /script.sh",
+            "/script.sh",
+        ]
         connection {
             type        = "ssh"
             host        = var.ip_address

@@ -16,7 +16,7 @@ terraform plan
 terraform apply
 ```
 
-It will crete 5 VM on GCP. The purpose is to setup yourself 2 masters and 3 workers. 
+It will create 5 VM on GCP. The purpose is to setup yourself 2 masters and 3 workers. 
 
 ## Links
 

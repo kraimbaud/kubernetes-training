@@ -13,7 +13,7 @@ module "master_node" {
 }
 
 module "worker_node" {
-  count = 1
+  count = 2
   source = "./modules/instances"
   vm_name = "worker-${count.index + 1}"
   network = google_compute_network.vpc_network.name

@@ -26,8 +26,3 @@ sudo apt-mark hold kubelet kubeadm kubectl
 
 sudo sed -i 's/bash/zsh/g' /etc/passwd # Use zsh as default shell
 
-# Set aliases
-echo "alias k=kubectl" >> ~/.bashrc
-source ~/.bashrc
-echo "alias k=kubectl" >> ~/.zshrc
-source ~/.zshrc

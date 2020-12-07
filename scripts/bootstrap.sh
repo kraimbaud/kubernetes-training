@@ -11,11 +11,10 @@ sudo apt-get install -y \
     zsh \
     vim
 
-sudo sed -i 's/bash/zsh/g' /etc/passwd # Use zsh as default shell
-
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
 sudo apt-get update && sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+sudo gpasswd -a $USER docker # Run docker without sudo
 
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
@@ -24,3 +23,11 @@ EOF
 sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
+
+sudo sed -i 's/bash/zsh/g' /etc/passwd # Use zsh as default shell
+
+# Set aliases
+echo "alias k=kubectl" >> ~/.bashrc
+source ~/.bashrc
+echo "alias k=kubectl" >> ~/.zshrc
+source ~/.zshrc

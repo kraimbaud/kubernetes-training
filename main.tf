@@ -4,7 +4,7 @@ terraform {
 }
 
 module "master_node" {
-  count = 1
+  count = var.nb_of_master_nodes
   source = "./modules/instances"
   vm_name = "master-${count.index + 1}"
   network = google_compute_network.vpc_network.name
@@ -13,7 +13,7 @@ module "master_node" {
 }
 
 module "worker_node" {
-  count = 2
+  count = var.nb_of_worker_nodes
   source = "./modules/instances"
   vm_name = "worker-${count.index + 1}"
   network = google_compute_network.vpc_network.name

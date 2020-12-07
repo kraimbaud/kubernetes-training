@@ -19,3 +19,11 @@ variable "zone" {
 variable "script" {
   default = "./scripts/bootstrap.sh"
 }
+
+variable "nb_of_master_nodes" {
+  default = 1
+}
+
+variable "nb_of_worker_nodes" {
+  default = 2
+}

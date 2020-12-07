@@ -15,6 +15,19 @@ terraform init
 terraform apply
 ```
 
+It will create 1 master node with 2 worker nodes.   
+If you want to change that behavior you need to create a `custom.tfvars` file with your own value
+```
+nb_of_master_nodes = 3
+nb_of_worker_nodes = 3
+```
+and then execute
+```bash
+terraform apply -var-file="custom.tfvars"
+```
+
+
+
 It will create 5 VM on GCP. The purpose is to setup yourself 2 masters and 3 workers. 
 
 ## Links

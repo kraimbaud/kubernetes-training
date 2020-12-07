@@ -26,10 +26,6 @@ and then execute
 terraform apply -var-file="custom.tfvars"
 ```
 
-
-
-It will create 5 VM on GCP. The purpose is to setup yourself 2 masters and 3 workers. 
-
 ## Links
 
 

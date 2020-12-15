@@ -39,7 +39,7 @@ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documen
 ```
 
 ## Links
-https://coreos.com/flannel/docs/latest/kubernetes.html
+https://coreos.com/flannel/docs/latest/kubernetes.html   
 https://github.com/coreos/flannel
 
 

@@ -26,7 +26,21 @@ and then execute
 terraform apply -var-file="custom.tfvars"
 ```
 
+### Create Kubernetes Cluster 
+
+Initialize Kubernetes Cluster 
+```bash
+kubeadm init --pod-network-cidr=10.244.0.0/16
+```
+
+Deploying POD network (Using flannel)
+```bash
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+```
+
 ## Links
+https://coreos.com/flannel/docs/latest/kubernetes.html
+https://github.com/coreos/flannel
 
 
 

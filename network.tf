@@ -28,6 +28,10 @@ resource "google_compute_firewall" "node-ingress-rule" {
   network = google_compute_network.vpc_network.name
 
   allow {
+    protocol = "all" # To solve! Must not be to all
+  }
+
+  allow {
     protocol = "tcp"
     ports    = ["80", "30000-32767"]
   }

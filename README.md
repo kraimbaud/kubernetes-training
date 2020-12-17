@@ -3,7 +3,7 @@ Kubernetes Training Program
 The purpose of this project is to understand how to create your own cluster from scratch on GCP
  and train your K8s skill to get better.
 
-## Where to start ?
+### Where to start ?
 - Create your GCP project: [Google Cloud Console](https://console.cloud.google.com/home/dashboard)
 - Create a new service account name `terraform` and generate a new key `terraform-key.json`, that you will put at the root of your project.  
 Use the [project editor role](https://cloud.google.com/iam/docs/understanding-roles?hl=en) for this service account. 
@@ -45,7 +45,7 @@ Go to the link bellow and improve your skill step by step
 - [Training Program for CKAD and CKA Exam](./docs/training-program.md)
 
 
-## Links
+### Links
 https://coreos.com/flannel/docs/latest/kubernetes.html   
 https://github.com/coreos/flannel
 

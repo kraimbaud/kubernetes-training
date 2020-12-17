@@ -7,13 +7,12 @@ Try always to `Create`, `Edit` and `Delete` Resources in **Imperative** and **De
 - [Pod](https://kubernetes.io/docs/concepts/workloads/pods/)
 - [ReplicaSet](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)
 - [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
-- [Services](https://kubernetes.io/fr/docs/concepts/services-networking/service/)
 - [Configure Service Accounts for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
 - [Taints and toleration](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)
 - [Assigning Pods to Nodes (Node Selectors and Affinity)](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/)
 
 ### Observability
-- [Configure Liveness, Readiness and Startup Probes)](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
+- [Configure Liveness, Readiness and Startup Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
 
 ### Configuration
 - [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/)
@@ -24,5 +23,12 @@ Try always to `Create`, `Edit` and `Delete` Resources in **Imperative** and **De
 - [Rollback](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-back-a-deployment)
 
 ### Services & Networking
+- [Services](https://kubernetes.io/fr/docs/concepts/services-networking/service/)
+- [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
+- [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 
 ### State Persistence
+- [Volumes](https://kubernetes.io/docs/concepts/storage/volumes/)
+- [Persistent Volumes & Claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
+- [Storage Classes](https://kubernetes.io/docs/concepts/storage/storage-classes/)
+- [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)

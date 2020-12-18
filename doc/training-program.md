@@ -1,4 +1,4 @@
-# Training Program for CKAD and CKA Exam
+# Training Program for CKAD and CKA Exams
 
 This is the training program to follow to improve your Kubernetes skills.   
 Try always to `Create`, `Edit` and `Delete` Resources in **Imperative** and **Declarative** way.
@@ -7,16 +7,21 @@ Try always to `Create`, `Edit` and `Delete` Resources in **Imperative** and **De
 - [Pod](https://kubernetes.io/docs/concepts/workloads/pods/)
 - [ReplicaSet](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)
 - [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
-- [Configure Service Accounts for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
-- [Taints and toleration](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)
-- [Assigning Pods to Nodes (Node Selectors and Affinity)](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/)
-
-### Observability
-- [Configure Liveness, Readiness and Startup Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
+- [Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
 
 ### Configuration
 - [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/)
 - [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
+- [Configure a Security Context for a Pod or Container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
+- [Configure Service Accounts for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
+- [Taints and toleration](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)
+- [Assigning Pods to Nodes (Node Selectors and Affinity)](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/)
+
+### Mutli-Container PODs
+- [Mutli-Container PODs](https://kubernetes.io/docs/concepts/workloads/pods/#how-pods-manage-multiple-containers)
+
+### Observability
+- [Configure Liveness, Readiness and Startup Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
 
 ### POD Design
 - [Performing a Rolling Update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/)

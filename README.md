@@ -42,7 +42,7 @@ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documen
 Now that you have setup your K8s cluster it's time to train. 
 Go to the link bellow and improve your skill step by step
 
-- [Training Program for CKAD and CKA Exam](./docs/training-program.md)
+- [Training Program for CKAD and CKA Exam](./doc/training-program.md)
 
 
 ### Links

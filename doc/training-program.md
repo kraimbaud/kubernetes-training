@@ -21,6 +21,8 @@ Try always to `Create`, `Edit` and `Delete` Resources in **Imperative** and **De
 ### POD Design
 - [Performing a Rolling Update](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/)
 - [Rollback](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-back-a-deployment)
+- [Job](https://kubernetes.io/docs/concepts/workloads/controllers/job/)
+- [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
 
 ### Services & Networking
 - [Services](https://kubernetes.io/fr/docs/concepts/services-networking/service/)

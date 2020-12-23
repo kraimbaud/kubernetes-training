@@ -1,23 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    deployment.kubernetes.io/revision: "1"
-  generation: 1
+  name: mysql
   labels:
     app: mysql
-  name: mysql
   namespace: exo-2
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: mysql
-  strategy:
-    rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
-    type: RollingUpdate
   template:
     metadata:
       labels:
@@ -25,8 +17,7 @@ spec:
     spec:
       containers:
         - image: mysql
-          imagePullPolicy: Always
           name: mysql
           ports:
-            - containerPort: 3306
-              protocol: TCP
+          - containerPort: 3306
+            protocol: TCP

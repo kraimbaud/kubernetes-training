@@ -17,6 +17,8 @@ Try always to `Create`, `Edit` and `Delete` Resources in **Imperative** and **De
 - [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
 - [Configure Service Accounts for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
 
+[Train with Exercises](exercises/2.md)
+
 ### Scheduling
 - [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
 - [Taints and toleration](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)

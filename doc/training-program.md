@@ -8,6 +8,7 @@ Try always to `Create`, `Edit` and `Delete` Resources in **Imperative** and **De
 - [ReplicaSet](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)
 - [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
 - [Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
+- [Horizontal Pod Autoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
 
 ### Configuration
 - [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/)

@@ -3,12 +3,14 @@
 This is the training program to follow to improve your Kubernetes skills.   
 Try always to `Create`, `Edit` and `Delete` Resources in **Imperative** and **Declarative** way.
 
-### Core Concepts
+### Core Concepts 
 - [Pod](https://kubernetes.io/docs/concepts/workloads/pods/)
 - [ReplicaSet](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)
 - [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
 - [Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
 - [Horizontal Pod Autoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
+
+[Train with Exercises](exercises/1.md)
 
 ### Configuration
 - [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/)

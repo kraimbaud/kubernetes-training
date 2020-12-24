@@ -23,6 +23,8 @@ spec:
               value: "localhost"
             - name: WORDPRESS_DB_USER
               value: "root"
+            - name: WORDPRESS_DB_PASSWORD
+              value: "1234"
             - name: WORDPRESS_DB_NAME
               value: "wordpress"
             - name: WORDPRESS_TABLE_PREFIX

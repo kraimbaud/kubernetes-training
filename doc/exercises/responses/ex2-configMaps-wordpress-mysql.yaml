@@ -65,7 +65,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: "wordpress-mysql"
-                  key: MYSQL_PASSWORD
+                  key: db_password
             - name: MYSQL_RANDOM_ROOT_PASSWORD
               valueFrom:
                 configMapKeyRef:

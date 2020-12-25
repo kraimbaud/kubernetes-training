@@ -1,5 +1,18 @@
 ---
 apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: wordpress-mysql
+data:
+  db_host: "mysql"
+  db_user: "admin"
+  db_password: "1234"
+  db_random_root_password: "1"
+  db_name: "wordpress"
+  wordpress_db_prefix: "wp_"
+
+---
+apiVersion: v1
 kind: Service
 metadata:
   labels:
@@ -38,13 +51,25 @@ spec:
           name: mysql
           env:
             - name: MYSQL_DATABASE
-              value: "wordpress"
+              valueFrom:
+                configMapKeyRef:
+                  name: "mysql"
+                  key: db_name
             - name: MYSQL_USER
-              value: "admin"
+              valueFrom:
+                configMapKeyRef:
+                  name: "mysql"
+                  key: db_user
             - name: MYSQL_PASSWORD
-              value: "1234"
+              valueFrom:
+                configMapKeyRef:
+                  name: "mysql"
+                  key: MYSQL_PASSWORD
             - name: MYSQL_RANDOM_ROOT_PASSWORD
-              value: "1"
+              valueFrom:
+                configMapKeyRef:
+                  name: "mysql"
+                  key: MYSQL_RANDOM_ROOT_PASSWORD
           ports:
             - containerPort: 3306
               protocol: TCP
@@ -90,15 +115,25 @@ spec:
           name: wordpress
           env:
             - name: WORDPRESS_DB_HOST
-              value: "mysql"
-            - name: WORDPRESS_DB_USER
-              value: "admin"
+              valueFrom:
+                configMapKeyRef:
+                  name: "wordpress"
+                  key: db_host
             - name: WORDPRESS_DB_PASSWORD
-              value: "1234"
+              valueFrom:
+                configMapKeyRef:
+                  name: "wordpress"
+                  key: db_password
             - name: WORDPRESS_DB_NAME
-              value: "wordpress"
+              valueFrom:
+                configMapKeyRef:
+                  name: "wordpress"
+                  key: db_name
             - name: WORDPRESS_TABLE_PREFIX
-              value: "wp_"
+              valueFrom:
+                configMapKeyRef:
+                  name: "wordpress"
+                  key: wordpress_db_prefix
           ports:
             - containerPort: 80
               protocol: TCP

@@ -48,3 +48,39 @@ spec:
           ports:
           - containerPort: 3306
             protocol: TCP
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress
+  labels:
+    app: wordpress
+  namespace: exo-2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wordpress
+  template:
+    metadata:
+      labels:
+        app: wordpress
+    spec:
+      containers:
+        - image: wordpress
+          name: wordpress
+          env:
+            - name: WORDPRESS_DB_HOST
+              value: "mysql"
+            - name: WORDPRESS_DB_USER
+              value: "admin"
+            - name: WORDPRESS_DB_PASSWORD
+              value: "1234"
+            - name: WORDPRESS_DB_NAME
+              value: "wordpress"
+            - name: WORDPRESS_TABLE_PREFIX
+              value: "wp_"
+          ports:
+            - containerPort: 80
+              protocol: TCP

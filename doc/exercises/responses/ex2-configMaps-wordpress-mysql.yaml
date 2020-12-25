@@ -53,22 +53,22 @@ spec:
             - name: MYSQL_DATABASE
               valueFrom:
                 configMapKeyRef:
-                  name: "mysql"
+                  name: "wordpress-mysql"
                   key: db_name
             - name: MYSQL_USER
               valueFrom:
                 configMapKeyRef:
-                  name: "mysql"
+                  name: "wordpress-mysql"
                   key: db_user
             - name: MYSQL_PASSWORD
               valueFrom:
                 configMapKeyRef:
-                  name: "mysql"
+                  name: "wordpress-mysql"
                   key: MYSQL_PASSWORD
             - name: MYSQL_RANDOM_ROOT_PASSWORD
               valueFrom:
                 configMapKeyRef:
-                  name: "mysql"
+                  name: "wordpress-mysql"
                   key: MYSQL_RANDOM_ROOT_PASSWORD
           ports:
             - containerPort: 3306
@@ -117,22 +117,22 @@ spec:
             - name: WORDPRESS_DB_HOST
               valueFrom:
                 configMapKeyRef:
-                  name: "wordpress"
+                  name: "wordpress-mysql"
                   key: db_host
             - name: WORDPRESS_DB_PASSWORD
               valueFrom:
                 configMapKeyRef:
-                  name: "wordpress"
+                  name: "wordpress-mysql"
                   key: db_password
             - name: WORDPRESS_DB_NAME
               valueFrom:
                 configMapKeyRef:
-                  name: "wordpress"
+                  name: "wordpress-mysql"
                   key: db_name
             - name: WORDPRESS_TABLE_PREFIX
               valueFrom:
                 configMapKeyRef:
-                  name: "wordpress"
+                  name: "wordpress-mysql"
                   key: wordpress_db_prefix
           ports:
             - containerPort: 80

@@ -50,6 +50,24 @@ spec:
             protocol: TCP
 
 ---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: wordpress
+  name: wordpress
+  namespace: exo-2
+spec:
+  ports:
+    - nodePort: 30999
+      port: 80
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app: wordpress
+  type: NodePort
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:

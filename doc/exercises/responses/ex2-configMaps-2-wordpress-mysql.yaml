@@ -112,7 +112,7 @@ spec:
             - containerPort: 80
               protocol: TCP
       volumes:
-        - name: mysql-env
+        - name: wordpress-env
           configMap:
             name: wordpress-mysql
             items:

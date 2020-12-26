@@ -5,13 +5,17 @@ metadata:
   name: wordpress-mysql
   namespace: ex2
 data:
-  db.conf: |
-    db_host mysql
-    db_user admin
-    db_password 1234
-    db_random_root_password 1
-    db_name wordpress
-    wordpress_db_prefix wp_
+  wordpress.conf: |
+    WORDPRESS_DB_HOST mysql
+    WORDPRESS_DB_USER admin
+    WORDPRESS_DB_PASSWORD 1234
+    WORDPRESS_DB_NAME wordpress
+    WORDPRESS_DB_PREFIX wp_
+  mysql.conf: |
+    MYSQL_DATABASE wordpress
+    MYSQL_USER admin
+    MYSQL_PASSWORD: 1234
+    MYSQL_RANDOM_ROOT_PASSWORD 1
 
 ---
 apiVersion: v1

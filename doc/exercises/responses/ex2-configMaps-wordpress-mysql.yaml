@@ -120,6 +120,11 @@ spec:
                 configMapKeyRef:
                   name: "wordpress-mysql"
                   key: db_host
+            - name: WORDPRESS_DB_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: "wordpress-mysql"
+                  key: db_user
             - name: WORDPRESS_DB_PASSWORD
               valueFrom:
                 configMapKeyRef:

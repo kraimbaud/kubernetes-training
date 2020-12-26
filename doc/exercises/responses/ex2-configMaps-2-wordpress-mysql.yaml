@@ -5,12 +5,13 @@ metadata:
   name: wordpress-mysql
   namespace: ex2
 data:
-  db_host: "mysql"
-  db_user: "admin"
-  db_password: "1234"
-  db_random_root_password: "1"
-  db_name: "wordpress"
-  wordpress_db_prefix: "wp_"
+  db.conf: |
+    db_host=mysql
+    db_user=admin
+    db_password=1234
+    db_random_root_password=1
+    db_name=wordpress
+    wordpress_db_prefix=wp_
 
 ---
 apiVersion: v1
@@ -61,6 +62,9 @@ spec:
       - name: mysql-env
         configMap:
           name: wordpress-mysql
+          items:
+          - key: "db.conf"
+            path: "db.conf"
 ---
 apiVersion: v1
 kind: Service
@@ -108,6 +112,9 @@ spec:
             - containerPort: 80
               protocol: TCP
       volumes:
-        - name: wordpress-env
+        - name: mysql-env
           configMap:
             name: wordpress-mysql
+            items:
+              - key: "db.conf"
+                path: "db.conf"

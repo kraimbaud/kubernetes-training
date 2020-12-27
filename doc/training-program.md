@@ -7,6 +7,7 @@ Try always to `Create`, `Edit` and `Delete` Resources in **Imperative** and **De
 - [Pod](https://kubernetes.io/docs/concepts/workloads/pods/)
 - [ReplicaSet](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)
 - [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+- [Services](https://kubernetes.io/fr/docs/concepts/services-networking/service/)
 - [Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
 - [Horizontal Pod Autoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
 
@@ -48,8 +49,7 @@ Try always to `Create`, `Edit` and `Delete` Resources in **Imperative** and **De
 - [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
 - [Init Containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
 
-### Services & Networking
-- [Services](https://kubernetes.io/fr/docs/concepts/services-networking/service/)
+### Networking
 - [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 - [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 

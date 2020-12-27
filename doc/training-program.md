@@ -10,14 +10,14 @@ Try always to `Create`, `Edit` and `Delete` Resources in **Imperative** and **De
 - [Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
 - [Horizontal Pod Autoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
 
-[Train with Exercises](exercises/1.Core.md)
+[Train with Exercises](exercises/1.core.md)
 
 ### Configuration
 - [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/)
 - [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
 - [Configure Service Accounts for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
 
-[Train with Exercises](exercises/2.Configuration.md)
+[Train with Exercises](exercises/2.configuration.md)
 
 ### State Persistence
 - [Volumes](https://kubernetes.io/docs/concepts/storage/volumes/)
@@ -26,7 +26,7 @@ Try always to `Create`, `Edit` and `Delete` Resources in **Imperative** and **De
 - [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
 - [Headless Services](https://kubernetes.io/docs/concepts/services-networking/service/#headless-services)
 
-[Train with Exercises](exercises/3.Persistance.md)
+[Train with Exercises](exercises/3.persistence.md)
 
 ### Scheduling
 - [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)

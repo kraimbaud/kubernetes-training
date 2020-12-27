@@ -3,30 +3,24 @@
 This is the training program to follow to improve your Kubernetes skills.   
 Try always to `Create`, `Edit` and `Delete` Resources in **Imperative** and **Declarative** way.
 
-### Core Concepts 
+### Core Concepts [(Train with Exercises)](exercises/1.core.md)
 - [Pod](https://kubernetes.io/docs/concepts/workloads/pods/)
 - [ReplicaSet](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)
 - [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
 - [Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
 - [Horizontal Pod Autoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
 
-[Train with Exercises](exercises/1.core.md)
-
-### Configuration
+### Configuration [(Train with Exercises)](exercises/2.configuration.md)
 - [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/)
 - [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
 - [Configure Service Accounts for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
 
-[Train with Exercises](exercises/2.configuration.md)
-
-### State Persistence
+### State Persistence [(Train with Exercises)](exercises/3.persistence.md)
 - [Volumes](https://kubernetes.io/docs/concepts/storage/volumes/)
 - [Persistent Volumes & Claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
 - [Storage Classes](https://kubernetes.io/docs/concepts/storage/storage-classes/)
 - [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
 - [Headless Services](https://kubernetes.io/docs/concepts/services-networking/service/#headless-services)
-
-[Train with Exercises](exercises/3.persistence.md)
 
 ### Scheduling
 - [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)

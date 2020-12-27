@@ -5,17 +5,17 @@ metadata:
   name: wordpress-mysql
   namespace: ex2
 data:
-  wordpress.conf: |
-    WORDPRESS_DB_HOST mysql
-    WORDPRESS_DB_USER admin
-    WORDPRESS_DB_PASSWORD "1234"
-    WORDPRESS_DB_NAME wordpress
-    WORDPRESS_DB_PREFIX wp_
-  mysql.conf: |
-    MYSQL_DATABASE wordpress
-    MYSQL_USER admin
-    MYSQL_PASSWORD "1234"
-    MYSQL_RANDOM_ROOT_PASSWORD "1"
+  wordpress.env: |
+    WORDPRESS_DB_HOST=mysql
+    WORDPRESS_DB_USER=admin
+    WORDPRESS_DB_PASSWORD="1234"
+    WORDPRESS_DB_NAME=wordpress
+    WORDPRESS_DB_PREFIX=wp_
+  mysql.env: |
+    MYSQL_DATABASE=wordpress
+    MYSQL_USER=admin
+    MYSQL_PASSWORD="1234"
+    MYSQL_RANDOM_ROOT_PASSWORD="1"
 ---
 apiVersion: v1
 kind: Service
@@ -61,27 +61,6 @@ spec:
           ports:
             - containerPort: 3306
               protocol: TCP
-          env:
-            - name: MYSQL_DATABASE
-              valueFrom:
-                configMapKeyRef:
-                  name: "wordpress-mysql"
-                  key: MYSQL_DATABASE
-            - name: MYSQL_USER
-              valueFrom:
-                configMapKeyRef:
-                  name: "wordpress-mysql"
-                  key: MYSQL_USER
-            - name: MYSQL_PASSWORD
-              valueFrom:
-                configMapKeyRef:
-                  name: "wordpress-mysql"
-                  key: MYSQL_PASSWORD
-            - name: MYSQL_RANDOM_ROOT_PASSWORD
-              valueFrom:
-                configMapKeyRef:
-                  name: "wordpress-mysql"
-                  key: MYSQL_RANDOM_ROOT_PASSWORD
       volumes:
       - name: config
         configMap:
@@ -132,32 +111,6 @@ spec:
           ports:
             - containerPort: 80
               protocol: TCP
-          env:
-            - name: WORDPRESS_DB_HOST
-              valueFrom:
-                configMapKeyRef:
-                  name: "wordpress-mysql"
-                  key: WORDPRESS_DB_HOST
-            - name: WORDPRESS_DB_USER
-              valueFrom:
-                configMapKeyRef:
-                  name: "wordpress-mysql"
-                  key: WORDPRESS_DB_USER
-            - name: WORDPRESS_DB_PASSWORD
-              valueFrom:
-                configMapKeyRef:
-                  name: "wordpress-mysql"
-                  key: WORDPRESS_DB_PASSWORD
-            - name: WORDPRESS_DB_NAME
-              valueFrom:
-                configMapKeyRef:
-                  name: "wordpress-mysql"
-                  key: WORDPRESS_DB_NAME
-            - name: WORDPRESS_TABLE_PREFIX
-              valueFrom:
-                configMapKeyRef:
-                  name: "wordpress-mysql"
-                  key: WORDPRESS_TABLE_PREFIX
       volumes:
         - name: config
           configMap:

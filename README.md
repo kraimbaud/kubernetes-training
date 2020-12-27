@@ -46,9 +46,6 @@ Go to the link bellow and improve your skill step by step
 
 
 ### Links
-https://coreos.com/flannel/docs/latest/kubernetes.html   
-https://github.com/coreos/flannel
-[Connecting to instances as the root user](https://cloud.google.com/compute/docs/instances/connecting-advanced#root)
-
-
-
+- https://coreos.com/flannel/docs/latest/kubernetes.html   
+- https://github.com/coreos/flannel
+- [Connecting to instances as the root user](https://cloud.google.com/compute/docs/instances/connecting-advanced#root)

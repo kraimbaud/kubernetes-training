@@ -14,8 +14,8 @@ There are different way to inject ENV variables with ConfigMaps :
 
 Try the 3 of them.   
 
-| Type                 | Responses                                                   |
-| -------------------- | ----------------------------------------------------------- |
+| Type                 | Responses                                                       |
+| -------------------- | --------------------------------------------------------------- |
 | Env                  | [response](responses/ex2/ex2-configMaps-1-wordpress-mysql.yaml) |
 | Single Env Variables | [response](responses/ex2/ex2-configMaps-2-wordpress-mysql.yaml) |
 | File in a Volume     | [response](responses/ex2/ex2-configMaps-3-wordpress-mysql.yaml) |

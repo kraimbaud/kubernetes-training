@@ -18,6 +18,9 @@ Add a volume to the `mysql` container, so if the pod is deleted we keep the data
 > but because nodes are on different servers, there are in fact not the same. Data, then, won't be retrieved on all the nodes.   
 > This is why we are working with a single worker cluster for this exercise.   
 
+If you add another node and and scale the mysql database `kubectl -n ex3 scale deploy mysql --replicas=4`, you will see that when 
+you refresh the page sometimes (when the we target a pod the other node) the app is not working. 
+
 To fix that issue replace the volume `hostPath` with a [gcePersistentDisk](https://raw.githubusercontent.com/kraimbaud/kubernetes-training/main/doc/exercises/responses/ex3/ex3-wordpress-mysql.yaml). This GCE PD must already exist.   
 PS: You can also choose another Volume Type if you are using another cloud provider.   
 [:bulb: response](responses/ex3/ex3-gcePd-mysql.yaml)

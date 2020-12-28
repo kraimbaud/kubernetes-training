@@ -27,7 +27,7 @@ PS: You can also choose another Volume Type if you are using another cloud provi
 
 ### Exercise 3.2 - Persistent Volumes & Claims
 In the previous exercise, all the volume configuration was at the pod level. Let's change that by using a Persistence Volume Object, 
-and use a pvc to use the volume.
+and use a pvc to use the volume.   
 [:bulb: response](responses/ex3/ex3-pvc-mysql.yaml)
 
 ### Exercise 3.3 - Storage Classes

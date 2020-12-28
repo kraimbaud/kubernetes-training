@@ -44,7 +44,7 @@ spec:
             - containerPort: 3306
               protocol: TCP
           volumeMounts:
-            - mountPath: /etc/mysql/conf.d
+            - mountPath: /var/lib/mysql
               name: data-volume
       volumes:
       - name: data-volume

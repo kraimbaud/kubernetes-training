@@ -20,8 +20,8 @@ Try the 3 of them.
 | Single Env Variables | [:bulb: response](responses/ex2/ex2-configMaps-2-wordpress-mysql.yaml) |
 | File in a Volume     | [:bulb: response](responses/ex2/ex2-configMaps-3-wordpress-mysql.yaml) |
 
-:exclamation: For the `file in a volume` it's normal if it is not working as wordpress is using environment variables. Just check if 
-the files are in the mounted directory.
+> :warning: For the `file in a volume` it's normal if it is not working as wordpress is using environment variables. 
+> Just check if the files are in the mounted directory.
 
 ### Exercise 2.2 - Secrets
 Now as you can see the password database `1234` is in clear in the ConfigMap. Let's change that by using a Secret and

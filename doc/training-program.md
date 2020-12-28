@@ -16,7 +16,7 @@ Try always to `Create`, `Edit` and `Delete` Resources in **Imperative** and **De
 - [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
 - [Configure Service Accounts for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
 
-### State Persistence [:memo: (Exercises)](exercises/persistence.md)
+### Data Persistence & State [:memo: (Exercises)](exercises/persistence.md)
 - [Volumes](https://kubernetes.io/docs/concepts/storage/volumes/)
 - [Persistent Volumes & Claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
 - [Storage Classes](https://kubernetes.io/docs/concepts/storage/storage-classes/)

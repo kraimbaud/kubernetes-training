@@ -20,6 +20,7 @@ Add a volume to the `mysql` container, so if the pod is deleted we keep the data
 
 To fix that issue replace the volume `hostPath` with a [gcePersistentDisk](https://raw.githubusercontent.com/kraimbaud/kubernetes-training/main/doc/exercises/responses/ex3/ex3-wordpress-mysql.yaml). This GCE PD must already exist.   
 PS: You can also choose another Volume Type if you are using another cloud provider.   
+[:bulb: response](responses/ex3/ex3-gcePd-mysql.yaml)
 
 ### Exercise 3.2 - Persistent Volumes & Claims
 In the previous exercise, all the volume configuration was at the pod level. Let's change that by using a Persistence Volume Object.   

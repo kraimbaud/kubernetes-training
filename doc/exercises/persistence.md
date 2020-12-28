@@ -22,5 +22,9 @@ To fix that issue replace the volume `hostPath` with a [gcePersistentDisk](https
 PS: You can also choose another Volume Type if you are using another cloud provider.   
 
 ### Exercise 3.2 - Persistent Volumes & Claims
-In the previous exercise, all the volume configuration was at the pod level. Let's change that by using a Persistence Volume Object.
-[:bulb: response](responses/ex3/ex3-pv-mysql.yaml)
+In the previous exercise, all the volume configuration was at the pod level. Let's change that by using a Persistence Volume Object.   
+[:bulb: response](responses/ex3/ex3-pvc-mysql.yaml)
+
+### Exercise 3.3 - Storage Classes
+Let's now use Storage classes.   
+[:bulb: response](responses/ex3/ex3-sc-mysql.yaml)

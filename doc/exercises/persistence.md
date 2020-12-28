@@ -17,9 +17,9 @@ Add a volume to the `mysql` container, so if the pod is deleted we keep the data
 them to be the same and have the same data, but because nodes are on different servers, there are in fact not the same. Data, then, won't be 
 retrieved on all the nodes. This is why we are working with a single worker cluster for this exercise.   
 
-To fix that issue replace the volume `hostPath` with a [gcePersistentDisk](https://raw.githubusercontent.com/kraimbaud/kubernetes-training/main/doc/exercises/responses/ex3/ex3-wordpress-mysql.yaml).   
+To fix that issue replace the volume `hostPath` with a [gcePersistentDisk](https://raw.githubusercontent.com/kraimbaud/kubernetes-training/main/doc/exercises/responses/ex3/ex3-wordpress-mysql.yaml). This GCE PD must already exist.   
 PS: You can also choose another Volume Type if you are using another cloud provider.   
 
 ### Exercise 3.2 - Persistent Volumes & Claims
-In the previous exercise, all the volume configuration was at the pod level. Let's change that by using a Persistence Volume Object.   
+In the previous exercise, all the volume configuration was at the pod level. Let's change that by using a Persistence Volume Object.
 [:bulb: response](responses/ex3/ex3-pv-mysql.yaml)

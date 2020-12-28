@@ -1,5 +1,5 @@
 # Configuration Exercises
-Create `ex2` namespace and deploy this [wordpress mysql app](resources/ex2-wordpress-mysql.yaml) in your K8s cluster.
+Create `n2` namespace and deploy this [wordpress mysql app](resources/ex2-wordpress-mysql.yaml) in your K8s cluster.
 
     kubectl apply -f https://raw.githubusercontent.com/kraimbaud/kubernetes-training/main/doc/exercises/resources/ex2-wordpress-mysql.yaml
 

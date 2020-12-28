@@ -47,10 +47,10 @@ spec:
             - mountPath: /etc/mysql/conf.d
               name: data-volume
       volumes:
-        - name: data-volume
-            hostPath:
-              path: /data
-              type: Directory
+      - name: data-volume
+          hostPath:
+            path: /data
+            type: Directory
 
 ---
 apiVersion: v1

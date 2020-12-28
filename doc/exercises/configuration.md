@@ -33,4 +33,4 @@ make the password stronger.
 
 ## What's Next?
 As you can see, there is one issue with those examples. There is no data persistence if we remove and scale pods.
-Let's go to the next chapter to learn [how to use persistence with volume](3.persistence.md).
+Let's go to the next chapter to learn [how to use persistence with volume](persistence.md).

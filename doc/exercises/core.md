@@ -16,19 +16,23 @@ Create a Replica Set of this Pod in namespace `ex1`
 ### Exercise 1.4 - Create a Deployment
 Create a Deployment of this Pod in namespace `ex1`
 
-- Images: nginx
-- Port: 80  
-- Replicas: 3
+| Config       | Value     |
+| -------------| ----------|
+| Images       | nginx     |
+| Port         | 80        |
+| Replicas     | 3         |
 
 [:bulb: response](responses/ex1/ex1-create-deploy.yaml)
 
 ### Exercise 1.5 - Use a Service to Expose a Deployment
 Expose your Deployment in namespace `ex1`
 
-- Service Name: nginx
-- Service Type: NodePort
-- Port: 80
-- Target Port: 80
+| Config       | Value     |
+| -------------| ----------|
+| Service Name | nginx     |
+| Port         | 80        |
+| Target Port  | 80        |
+| Service Type | NodePort  |
 
 [:bulb: response](responses/ex1/ex1-create-service.yaml)
 

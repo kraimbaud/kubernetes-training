@@ -20,3 +20,6 @@ retrieved on all the nodes. This is why we are working with a single worker clus
 To fix that issue replace the volume `hostPath` with a [gcePersistentDisk](https://raw.githubusercontent.com/kraimbaud/kubernetes-training/main/doc/exercises/responses/ex3/ex3-wordpress-mysql.yaml).   
 PS: You can also choose another Volume Type if you are using another cloud provider.   
 
+### Exercise 3.2 - Persistent Volumes & Claims
+In the previous exercise, all the volume configuration was at the pod level. Let's change that by using a Persistence Volume Object.   
+[:bulb: response](responses/ex3/ex3-pv-mysql.yaml)

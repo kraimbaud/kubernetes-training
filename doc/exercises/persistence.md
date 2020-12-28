@@ -10,9 +10,9 @@ There is one issue with this app. There is no data persistence if we remove and 
 
 ### Exercise 3.1 - Volumes
 
-Add a volume to the `mysql` container, so if the pod is deleted we keep the data safe.
+Add a volume to the `mysql` container, so if the pod is deleted we keep the data safe.   
 [:bulb: response](responses/ex3/ex3-wordpress-mysql.yaml)
 
-:exclamation: This approach is not recommended in a multi nodes cluster. This is because the pod will use directory path on every node and expect all of 
+:exclamation: This approach though, is not recommended in a multi nodes cluster. This is because the pod will use directory path on every nodes and expect all of 
 them to be the same and have the same data, but because nodes are on different servers, there are in fact not the same. Data, then, won't be 
-retrieved on all the nodes. This is why we are working with a single worker cluster.
+retrieved on all the nodes. This is why we are working with a single worker cluster for this exercise.

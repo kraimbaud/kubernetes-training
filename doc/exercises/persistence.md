@@ -13,9 +13,10 @@ There is one issue with this app. There is no data persistence if we remove and 
 Add a volume to the `mysql` container, so if the pod is deleted we keep the data safe.   
 [:bulb: response](responses/ex3/ex3-wordpress-mysql.yaml)
 
-:exclamation: This approach though, is not recommended in a multi nodes cluster. This is because the pod will use directory path on every nodes and expect all of 
-them to be the same and have the same data, but because nodes are on different servers, there are in fact not the same. Data, then, won't be 
-retrieved on all the nodes. This is why we are working with a single worker cluster for this exercise.   
+> :exclamation: This approach though, is not recommended in a multi nodes cluster. 
+> This is because the pod will use directory path on every nodes and expect all of them to be the same and have the same data, 
+> but because nodes are on different servers, there are in fact not the same. Data, then, won't be retrieved on all the nodes.   
+> This is why we are working with a single worker cluster for this exercise.   
 
 To fix that issue replace the volume `hostPath` with a [gcePersistentDisk](https://raw.githubusercontent.com/kraimbaud/kubernetes-training/main/doc/exercises/responses/ex3/ex3-wordpress-mysql.yaml). This GCE PD must already exist.   
 PS: You can also choose another Volume Type if you are using another cloud provider.   

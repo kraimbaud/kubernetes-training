@@ -26,3 +26,7 @@ variable "ip_address" {
 variable "private_key" {
   default = ""
 }
+
+variable "disk-name" {
+  default = "data"
+}

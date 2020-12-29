@@ -19,4 +19,13 @@ resource "google_compute_instance" "default" {
     metadata_startup_script = file("./scripts/bootstrap.sh")
 
     tags = ["node"]
+
+    lifecycle {
+        ignore_changes = [attached_disk]
+    }
+}
+
+resource "google_compute_attached_disk" "default" {
+    disk     = google_compute_disk.data.id
+    instance = google_compute_instance.default.id
 }

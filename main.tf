@@ -24,7 +24,7 @@ module "worker_node" {
 }
 
 module "disk" {
-  source = "./modules/disk"
-  name = "data"
+  source = "./modules/instances"
+  disk-name = "data"
   zone = var.zone
 }

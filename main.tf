@@ -10,6 +10,7 @@ module "master_node" {
   network = google_compute_network.vpc_network.name
   script_path = file(var.script)
   ip_address = google_compute_address.static.address
+  zone = var.zone
 }
 
 module "worker_node" {
@@ -19,4 +20,11 @@ module "worker_node" {
   network = google_compute_network.vpc_network.name
   script_path = file(var.script)
   ip_address = google_compute_address.static.address
+  zone = var.zone
+}
+
+module "disk" {
+  source = "./modules/disk"
+  name = "data"
+  zone = var.zone
 }

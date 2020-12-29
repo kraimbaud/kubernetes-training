@@ -48,10 +48,10 @@ spec:
               name: data-volume
       volumes:
         - name: data-volume
-            # This GCE PD must already exist.
-            gcePersistentDisk:
-              pdName: data-disk
-              fsType: ext4
+          # This GCE PD must already exist.
+          gcePersistentDisk:
+            pdName: data-disk
+            fsType: ext4
 
 ---
 apiVersion: v1

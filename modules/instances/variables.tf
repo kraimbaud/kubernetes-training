@@ -30,3 +30,8 @@ variable "private_key" {
 variable "disk-name" {
   default = "data"
 }
+
+variable "disk" {
+  default = ""
+}
+

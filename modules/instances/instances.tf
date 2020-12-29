@@ -26,6 +26,6 @@ resource "google_compute_instance" "default" {
 }
 
 resource "google_compute_attached_disk" "default" {
-    disk     = google_compute_disk.data.id
+    disk     = var.disk
     instance = google_compute_instance.default.id
 }

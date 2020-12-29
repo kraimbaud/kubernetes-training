@@ -8,6 +8,7 @@ module "master_node" {
   source = "./modules/instances"
   vm_name = "master-${count.index + 1}"
   network = google_compute_network.vpc_network.name
+  disk = google_compute_disk.data.name
   script_path = file(var.script)
   ip_address = google_compute_address.static.address
   zone = var.zone
@@ -18,13 +19,9 @@ module "worker_node" {
   source = "./modules/instances"
   vm_name = "worker-${count.index + 1}"
   network = google_compute_network.vpc_network.name
+  disk = google_compute_disk.data.name
   script_path = file(var.script)
   ip_address = google_compute_address.static.address
   zone = var.zone
 }
 
-module "disk" {
-  source = "./modules/instances"
-  disk-name = "data"
-  zone = var.zone
-}

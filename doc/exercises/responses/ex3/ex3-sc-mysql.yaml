@@ -4,6 +4,9 @@ kind: StorageClass
 metadata:
   name: google-storage
 provisioner: kubernetes.io/gce-pd
+parameters:
+  type: pd-ssd
+  replication-type: none
 
 ---
 apiVersion: v1

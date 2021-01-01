@@ -29,13 +29,13 @@ terraform apply -var-file="custom.tfvars"
 ### Create Kubernetes Cluster 
 Initialize Kubernetes Cluster 
 ```bash
-kubeadm init --pod-network-cidr=10.244.0.0/16
+sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 ```
 
 Deploying POD network (Using flannel). 
 You can also use other network on [the official K8s documentaion](https://kubernetes.io/docs/concepts/cluster-administration/networking/)
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
 
 ### Training ToDo List

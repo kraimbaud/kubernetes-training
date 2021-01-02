@@ -1,6 +1,6 @@
 # Persistence Exercises
-For this exercise you will need to create a cluster with only one master and one worker. The master shouldn't be
-schedulable for Pods.
+For this exercise you will need to create a cluster **with only one master and one worker**. The master shouldn't be
+schedulable for Pods. The purpose is to, step by step build a HA StateulSet mysql and wordpress application. 
 
 Create `n3` namespace and deploy this [wordpress mysql app](resources/ex3-wordpress-mysql.yaml) in your K8s cluster.
 
@@ -22,7 +22,8 @@ If you add another node and scale the mysql database `kubectl -n ex3 scale deplo
 you refresh the page sometimes (when we target a pod to another node) the app is not working. 
 
 To fix that issue replace the volume `hostPath` with a [gcePersistentDisk](https://raw.githubusercontent.com/kraimbaud/kubernetes-training/main/doc/exercises/responses/ex3/ex3-wordpress-mysql.yaml). This GCE PD must already exist.   
-PS: You can also choose another Volume Type if you are using another cloud provider.   
+PS: We are still using only one worker node as each instance must have its own persistence disk. But in a architecture with multiple node you should 
+have set up a gce persistence disk for each of your nodes.
 [:bulb: response](responses/ex3/ex3-gcePd-mysql.yaml)
 
 ### Exercise 3.2 - Persistent Volumes & Claims
@@ -45,5 +46,6 @@ Now for mysql instead of using a `Deployment` Object, use a `StatefulSets`.
 [:bulb: response](responses/ex3/ex3-statefulsets-mysql.yaml)
 
 ### Exercise 3.5 - VolumeClaimTemplate
-Now use a `VolumeClaimTemplate` in your `StatefulSets`.   
+Now that we are using `StatefulSets` we can configure each mysql pods to have their own pvc. 
+Let's use a `VolumeClaimTemplate` in your `StatefulSets`.   
 [:bulb: response](responses/ex3/ex3-pvct-mysql.yaml)

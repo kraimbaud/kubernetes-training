@@ -33,6 +33,7 @@ metadata:
     app: mysql
   namespace: n3
 spec:
+  serviceName: "mysql"
   replicas: 1
   selector:
     matchLabels:

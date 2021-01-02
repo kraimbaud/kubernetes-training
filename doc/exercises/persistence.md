@@ -33,3 +33,7 @@ and use a pvc to use the volume.
 ### Exercise 3.3 - Storage Classes
 Let's now use Storage classes.   
 [:bulb: response](responses/ex3/ex3-sc-mysql.yaml)
+
+### Exercise 3.4 - StatefulSets
+Now for mysql instead of using a `Deployment` Object, use a `StatefulSets`.   
+[:bulb: response](responses/ex3/ex3-sc-mysql.yaml)

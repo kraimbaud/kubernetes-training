@@ -33,13 +33,13 @@ and use a pvc to use the volume.
 ### Exercise 3.3 - Storage Classes
 Let's now use Storage classes.   
 > :warning: Using the GCECloudProvider in Kubernetes outside of the Google Kubernetes Engine has the following prerequisites (the last point is Kubeadm specific):   
-> The VM needs to be run with a service account that has the right to provision disks.   
-> The Kubelet needs to run with the argument `--cloud-provider=gce`. For this the `KUBELET_KUBECONFIG_ARGS` in `/etc/systemd/system/kubelet.service.d/10-kubeadm.conf` have to be edited.   
-> The Kubelet can then be restarted with `sudo systemctl restart kubelet`
-> The Kubernetes cloud-config file needs to be configured. The file can be found at [/etc/kubernetes/cloud-config](../../cloud-config/gce.yaml) and the content is enough to get the cloud provider to work:
+> - The VM needs to be run with a service account that has the right to provision disks.   
+> - The Kubelet needs to run with the argument `--cloud-provider=gce`. For this the `KUBELET_KUBECONFIG_ARGS` in `/etc/systemd/system/kubelet.service.d/10-kubeadm.conf` have to be edited.   
+> - The Kubelet can then be restarted with `sudo systemctl restart kubelet`
+> - The Kubernetes cloud-config file needs to be configured. The file can be found at [/etc/kubernetes/cloud-config](../../cloud-config/gce.yaml) and the content is enough to get the cloud provider to work:
 
 [:bulb: response](responses/ex3/ex3-sc-mysql.yaml)
 
 ### Exercise 3.4 - StatefulSets
 Now for mysql instead of using a `Deployment` Object, use a `StatefulSets`.   
-[:bulb: response](responses/ex3/ex3-sc-mysql.yaml)
+[:bulb: response](responses/ex3/ex3-statefulsets-mysql.yaml)

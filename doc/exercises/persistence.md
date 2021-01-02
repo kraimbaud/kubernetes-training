@@ -1,5 +1,5 @@
 # Persistence Exercises
-For this exercise you will need to create a cluster with only using only one master and one worker. The master shouldn't be
+For this exercise you will need to create a cluster with only one master and one worker. The master shouldn't be
 schedulable for Pods.
 
 Create `n3` namespace and deploy this [wordpress mysql app](resources/ex3-wordpress-mysql.yaml) in your K8s cluster.
@@ -43,3 +43,7 @@ Let's now use Storage classes.
 ### Exercise 3.4 - StatefulSets
 Now for mysql instead of using a `Deployment` Object, use a `StatefulSets`.   
 [:bulb: response](responses/ex3/ex3-statefulsets-mysql.yaml)
+
+### Exercise 3.5 - VolumeClaimTemplate
+Now use a `VolumeClaimTemplate` in your `StatefulSets`.   
+[:bulb: response](responses/ex3/ex3-pvct-mysql.yaml)

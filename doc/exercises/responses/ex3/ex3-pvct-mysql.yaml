@@ -59,13 +59,10 @@ spec:
               protocol: TCP
           volumeMounts:
             - mountPath: /var/lib/mysql
-              name: mysql-data
-      volumes:
-        - name: mysql-data
-          persistentVolumeClaim:
-            claimName: pvc-mysql
+              name: pvc-mysql
   volumeClaimTemplates:
   - metadata:
+      name: pvc-mysql
       namespace: n3
     spec:
       accessModes:

@@ -46,6 +46,6 @@ Now for mysql instead of using a `Deployment` Object, use a `StatefulSets`.
 [:bulb: response](responses/ex3/ex3-statefulsets-mysql.yaml)
 
 ### Exercise 3.5 - VolumeClaimTemplate
-Now that we are using `StatefulSets` we can configure each mysql pods to have their own pvc. 
+Now that we are using `StatefulSets` we can configure each mysql pods to have their own pvc.   
 Let's use a `VolumeClaimTemplate` in your `StatefulSets`.   
 [:bulb: response](responses/ex3/ex3-pvct-mysql.yaml)

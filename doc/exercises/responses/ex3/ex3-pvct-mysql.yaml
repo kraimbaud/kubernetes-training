@@ -5,7 +5,20 @@ metadata:
   name: volume-1
 spec:
   capacity:
-    storage: 5Gi
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /var/data
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: volume-2
+spec:
+  capacity:
+    storage: 1Gi
   accessModes:
     - ReadWriteOnce
   hostPath:

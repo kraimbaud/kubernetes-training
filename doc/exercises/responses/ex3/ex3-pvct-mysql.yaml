@@ -25,6 +25,19 @@ spec:
     path: /var/data
 
 ---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: volume-3
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /var/data
+
+---
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -34,7 +47,7 @@ metadata:
   namespace: n3
 spec:
   serviceName: "mysql"
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: mysql

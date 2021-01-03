@@ -64,16 +64,16 @@ spec:
         - name: mysql-data
           persistentVolumeClaim:
             claimName: pvc-mysql
-    volumeClaimTemplate:
-    - metadata:
-        name: pvc-mysql
-        namespace: n3
-      spec:
-        accessModes:
-          - ReadWriteOnce
-        resources:
-          requests:
-            storage: 1Gi
+volumeClaimTemplate:
+- metadata:
+    name: pvc-mysql
+    namespace: n3
+  spec:
+    accessModes:
+      - ReadWriteOnce
+    resources:
+      requests:
+        storage: 1Gi
 
 ---
 apiVersion: v1

@@ -64,7 +64,7 @@ spec:
         - name: mysql-data
           persistentVolumeClaim:
             claimName: pvc-mysql
-  volumeClaimTemplate:
+  volumeClaimTemplates:
   - metadata:
       name: pvc-mysql
       namespace: n3

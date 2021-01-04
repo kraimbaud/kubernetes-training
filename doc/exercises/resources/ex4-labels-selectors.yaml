@@ -5,7 +5,7 @@ metadata:
   name: app-1
   namespace: n4
   labels:
-    environment: dev
+    env: dev
     app: front-end
 spec:
   containers:
@@ -19,7 +19,7 @@ metadata:
   name: app-2
   namespace: n4
   labels:
-    environment: dev
+    env: dev
     app: back-end
 spec:
   containers:
@@ -33,7 +33,7 @@ metadata:
   name: app-3
   namespace: n4
   labels:
-    environment: prod
+    env: prod
     app: front-end
 spec:
   containers:
@@ -47,7 +47,7 @@ metadata:
   name: app-4
   namespace: n4
   labels:
-    environment: prod
+    env: prod
     app: front-end
 spec:
   containers:
@@ -61,7 +61,7 @@ metadata:
   name: app-5
   namespace: n4
   labels:
-    environment: prod
+    env: prod
     app: back-end
 spec:
   containers:

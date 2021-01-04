@@ -12,4 +12,4 @@ After deploying the resources, anwser those questions:
 - How many pods are in `production`?
 - What is the name of the `front-end` pods in `dev`?
 - What is the name of the `back-end` pods in `prod`?   
-[:bulb: response](responses/ex4/ex4-labels-selectors.yaml)
+[:bulb: response](responses/ex4/ex4-labels-selectors.md)

@@ -10,6 +10,7 @@ metadata:
 spec:
   containers:
     - image: busybox
+      name: busybox
 
 ---
 apiVersion: v1
@@ -23,6 +24,7 @@ metadata:
 spec:
   containers:
     - image: busybox
+      name: busybox
 
 ---
 apiVersion: v1
@@ -36,6 +38,7 @@ metadata:
 spec:
   containers:
     - image: busybox
+      name: busybox
 
 ---
 apiVersion: v1
@@ -49,6 +52,7 @@ metadata:
 spec:
   containers:
     - image: busybox
+      name: busybox
 
 ---
 apiVersion: v1
@@ -62,3 +66,4 @@ metadata:
 spec:
   containers:
     - image: busybox
+      name: busybox

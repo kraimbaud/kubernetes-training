@@ -8,6 +8,7 @@ metadata:
     env: dev
     app: front-end
     lang: javascript
+    release: beta
 spec:
   containers:
     - image: ubuntu
@@ -23,6 +24,7 @@ metadata:
     env: dev
     app: back-end
     lang: python
+    release: beta
 spec:
   containers:
     - image: python
@@ -38,6 +40,7 @@ metadata:
     env: prod
     app: front-end
     lang: javascript
+    release: stable
 spec:
   containers:
     - image: ubuntu
@@ -53,6 +56,7 @@ metadata:
     env: prod
     app: front-end
     lang: javascript
+    release: stable
 spec:
   containers:
     - image: ubuntu
@@ -68,6 +72,7 @@ metadata:
     env: prod
     app: back-end
     lang: php
+    release: stable
 spec:
   containers:
     - image: php:7.1

@@ -1,0 +1,64 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-1
+  namespace: n4
+  labels:
+    environment: dev
+    app: front-end
+spec:
+  containers:
+    - image: busybox
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-2
+  namespace: n4
+  labels:
+    environment: dev
+    app: back-end
+spec:
+  containers:
+    - image: busybox
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-3
+  namespace: n4
+  labels:
+    environment: prod
+    app: front-end
+spec:
+  containers:
+    - image: busybox
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-4
+  namespace: n4
+  labels:
+    environment: prod
+    app: front-end
+spec:
+  containers:
+    - image: busybox
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-5
+  namespace: n4
+  labels:
+    environment: prod
+    app: back-end
+spec:
+  containers:
+    - image: busybox

@@ -50,6 +50,6 @@ Now that we are using `StatefulSets` we can configure each mysql pods to have th
 Let's use a `VolumeClaimTemplate` in your `StatefulSets`.   
 [:bulb: response](responses/ex3/ex3-pvct-mysql.yaml)
 
-### Exercise 3.5 - HeadLess Service
+### Exercise 3.6 - HeadLess Service
 Use a `HeadLess Service` to exposing the mysql StatefulSet app.   
 [:bulb: response](responses/ex3/ex3-headless-svc-mysql.yaml)

@@ -86,7 +86,6 @@ spec:
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: pvc-mysql
-
   volumeClaimTemplates:
     - metadata:
         name: pvc-mysql
@@ -113,7 +112,8 @@ spec:
       targetPort: 3306
   selector:
     app: mysql
-  type: None
+  type: ClusterIP
+  clusterIP: None
 
 ---
 apiVersion: v1

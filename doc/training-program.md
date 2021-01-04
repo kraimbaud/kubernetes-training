@@ -23,14 +23,6 @@ Try always to `Create`, `Edit` and `Delete` Resources in **Imperative** and **De
 - [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
 - [Headless Services](https://kubernetes.io/docs/concepts/services-networking/service/#headless-services)
 
-### Networking [:memo: (Exercises)](exercises/networking.md)
-- [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
-- [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
-
-### Logging & Monitoring [:memo: (Exercises)](exercises/logging-monitoring.md)
-- [Logging](https://kubernetes.io/docs/concepts/cluster-administration/logging/)
-- [Monitoring](https://kubernetes.io/docs/tasks/debug-application-cluster/)
-
 ### Scheduling [:memo: (Exercises)](exercises/scheduling.md)
 - [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)
 - [Taints and toleration](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)
@@ -39,6 +31,14 @@ Try always to `Create`, `Edit` and `Delete` Resources in **Imperative** and **De
 - [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)
 - [Create static Pods](https://kubernetes.io/docs/tasks/configure-pod-container/static-pod/)
 - [Configure Multiple Schedulers](https://kubernetes.io/docs/tasks/extend-kubernetes/configure-multiple-schedulers/)
+
+### Networking [:memo: (Exercises)](exercises/networking.md)
+- [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
+- [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
+
+### Logging & Monitoring [:memo: (Exercises)](exercises/logging-monitoring.md)
+- [Logging](https://kubernetes.io/docs/concepts/cluster-administration/logging/)
+- [Monitoring](https://kubernetes.io/docs/tasks/debug-application-cluster/)
 
 ### Mutli-Container PODs [:memo: (Exercises)](exercises/multi-container.md)
 - [Mutli-Container PODs](https://kubernetes.io/docs/concepts/workloads/pods/#how-pods-manage-multiple-containers)

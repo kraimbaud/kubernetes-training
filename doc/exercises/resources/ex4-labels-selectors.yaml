@@ -7,10 +7,11 @@ metadata:
   labels:
     env: dev
     app: front-end
+    lang: javascript
 spec:
   containers:
-    - image: busybox
-      name: busybox
+    - image: ubuntu
+      name: angular-font
 
 ---
 apiVersion: v1
@@ -21,10 +22,11 @@ metadata:
   labels:
     env: dev
     app: back-end
+    lang: python
 spec:
   containers:
-    - image: busybox
-      name: busybox
+    - image: python
+      name: python-back-end
 
 ---
 apiVersion: v1
@@ -35,10 +37,11 @@ metadata:
   labels:
     env: prod
     app: front-end
+    lang: javascript
 spec:
   containers:
-    - image: busybox
-      name: busybox
+    - image: ubuntu
+      name: angular-font
 
 ---
 apiVersion: v1
@@ -49,10 +52,11 @@ metadata:
   labels:
     env: prod
     app: front-end
+    lang: javascript
 spec:
   containers:
-    - image: busybox
-      name: busybox
+    - image: ubuntu
+      name: react-front
 
 ---
 apiVersion: v1
@@ -63,7 +67,8 @@ metadata:
   labels:
     env: prod
     app: back-end
+    lang: php
 spec:
   containers:
-    - image: busybox
-      name: busybox
+    - image: php:7.1
+      name: php-api

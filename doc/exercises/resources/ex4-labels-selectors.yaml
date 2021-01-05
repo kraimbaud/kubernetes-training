@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: n4
-  name: nginx-deployment
+  name: app-1
   labels:
     name: app-1
 spec:
@@ -28,76 +28,117 @@ spec:
             - "1000000"
 
 ---
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: Deployment
 metadata:
+  namespace: n4
   name: app-2
-  namespace: n4
   labels:
-    env: dev
-    app: back-end
-    lang: python
-    release: beta
+    name: app-2
 spec:
-  containers:
-    - image: busybox
-      name: busybox
-      args:
-        - sleep
-        - "1000000"
+  replicas: 3
+  selector:
+    matchLabels:
+      name: app-2
+  template:
+    metadata:
+      labels:
+        name: app-2
+        env: dev
+        app: back-end
+        lang: python
+        release: beta
+    spec:
+      containers:
+        - image: busybox
+          name: busybox
+          args:
+            - sleep
+            - "1000000"
 
 ---
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: Deployment
 metadata:
+  namespace: n4
   name: app-3
-  namespace: n4
   labels:
-    env: prod
-    app: front-end
-    lang: javascript
-    release: stable
+    name: app-3
 spec:
-  containers:
-    - image: busybox
-      name: busybox
-      args:
-        - sleep
-        - "1000000"
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: app-4
-  namespace: n4
-  labels:
-    env: prod
-    app: front-end
-    lang: javascript
-    release: stable
-spec:
-  containers:
-    - image: busybox
-      name: busybox
-      args:
-        - sleep
-        - "1000000"
+  replicas: 3
+  selector:
+    matchLabels:
+      name: app-3
+  template:
+    metadata:
+      labels:
+        name: app-3
+        env: prod
+        app: front-end
+        lang: javascript
+        release: stable
+    spec:
+      containers:
+        - image: busybox
+          name: busybox
+          args:
+            - sleep
+            - "1000000"
 
 ---
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: app-5
   namespace: n4
+  name: app-4
   labels:
-    env: prod
-    app: back-end
-    lang: php
-    release: stable
+    name: app-4
 spec:
-  containers:
-    - image: busybox
-      name: busybox
-      args:
-        - sleep
-        - "1000000"
+  replicas: 3
+  selector:
+    matchLabels:
+      name: app-4
+  template:
+    metadata:
+      labels:
+        name: app-4
+        env: prod
+        app: front-end
+        lang: javascript
+        release: stable
+    spec:
+      containers:
+        - image: busybox
+          name: busybox
+          args:
+            - sleep
+            - "1000000"
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: n4
+  name: app-5
+  labels:
+    name: app-5
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: app-5
+  template:
+    metadata:
+      labels:
+        name: app-5
+        env: prod
+        app: back-end
+        lang: php
+        release: stable
+    spec:
+      containers:
+        - image: busybox
+          name: busybox
+          args:
+            - sleep
+            - "1000000"

@@ -19,3 +19,5 @@ After deploying the resources, anwser those questions:
 ### Exercise 4.2 - Taints and toleration
 
 [:bulb: response](responses/ex4/ex4-taints-toleration.md)
+sudo kubeadm join 10.132.0.3:6443 --token eueij3.l7c0bzuweneh7x4a \
+--discovery-token-ca-cert-hash sha256:315871cbc444458ddfde4e6ebcde47d143c65c95c985cb1446a43f5148c65ec6

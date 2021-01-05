@@ -25,7 +25,3 @@ variable "nb_of_master_nodes" {
 variable "nb_of_worker_nodes" {
   default = 2
 }
-
-variable "disk-name" {
-  default = "data"
-}

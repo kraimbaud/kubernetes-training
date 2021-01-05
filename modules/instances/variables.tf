@@ -27,11 +27,4 @@ variable "private_key" {
   default = ""
 }
 
-variable "disk-name" {
-  default = "data"
-}
-
-variable "disk" {
-  default = ""
-}
 

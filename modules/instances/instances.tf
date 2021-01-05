@@ -25,8 +25,3 @@ resource "google_compute_instance" "default" {
     }
 }
 
-resource "google_compute_attached_disk" "default" {
-    disk     = var.disk
-    instance = google_compute_instance.default.id
-    mode = "READ_ONLY"
-}

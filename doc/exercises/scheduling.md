@@ -1,4 +1,5 @@
 # Scheduling Exercises
+For this exercise you will need to create a cluster **with 3 workers**.
 
 Create `n4` namespace and deploy those objects in your K8s cluster.
 
@@ -13,3 +14,8 @@ After deploying the resources, anwser those questions:
 - What is the name of the `front-end` pods in `dev`?
 - What is the name of the `back-end` pods in `prod`?   
 [:bulb: response](responses/ex4/ex4-labels-selectors.md)
+
+
+### Exercise 4.2 - Taints and toleration
+
+[:bulb: response](responses/ex4/ex4-taints-toleration.md)

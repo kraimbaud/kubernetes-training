@@ -34,3 +34,7 @@ Do the same with Node Affinity by adding affinity to nodes so:
 - The node `worker-3` only accept pods with `stable` **release**.   
 
 [:bulb: response](responses/ex4/ex4-nodes-affinity.yaml)
+
+### Exercise 4.4 - Managing Resources for Containers
+
+[:bulb: response](responses/ex4/ex4-resources.yaml)

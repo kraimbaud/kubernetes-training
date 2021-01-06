@@ -21,5 +21,6 @@ Add taints and toleration to nodes and pods so:
 
 - The Worker node 1 only accept pods with `alpha` release. 
 - The Worker node 2 only accept pods with `beta` release. 
-- The Worker node 3 only accept pods with `stable` release.
+- The Worker node 3 only accept pods with `stable` release.   
+
 [:bulb: response](responses/ex4/ex4-taints-toleration.yaml)

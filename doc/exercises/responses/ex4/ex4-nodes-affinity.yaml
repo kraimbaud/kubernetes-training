@@ -4,13 +4,7 @@ kind: Node
 metadata:
   name: worker-1
 spec:
-  taints:
-    - effect: NoExecute
-      key: release
-      value: alpha
-    - effect: NoSchedule
-      key: release
-      value: alpha
+  taints: None
 
 ---
 apiVersion: v1
@@ -18,13 +12,7 @@ kind: Node
 metadata:
   name: worker-2
 spec:
-  taints:
-    - effect: NoExecute
-      key: release
-      value: beta
-    - effect: NoSchedule
-      key: release
-      value: beta
+  taints: None
 
 ---
 apiVersion: v1
@@ -32,13 +20,7 @@ kind: Node
 metadata:
   name: worker-3
 spec:
-  taints:
-    - effect: NoExecute
-      key: release
-      value: stable
-    - effect: NoSchedule
-      key: release
-      value: stable
+  taints: None
 
 ---
 apiVersion: apps/v1
@@ -62,16 +44,6 @@ spec:
         lang: javascript
         release: beta
     spec:
-      tolerations:
-        - key: "release"
-          operator: "Equal"
-          value: "beta"
-          effect: "NoSchedule"
-        - key: "release"
-          operator: "Equal"
-          value: "beta"
-          effect: "NoExecute"
-
       containers:
         - image: busybox
           name: busybox
@@ -101,15 +73,6 @@ spec:
         lang: python
         release: alpha
     spec:
-      tolerations:
-        - key: "release"
-          operator: "Equal"
-          value: "alpha"
-          effect: "NoSchedule"
-        - key: "release"
-          operator: "Equal"
-          value: "alpha"
-          effect: "NoExecute"
       containers:
         - image: busybox
           name: busybox
@@ -139,15 +102,6 @@ spec:
         lang: javascript
         release: stable
     spec:
-      tolerations:
-        - key: "release"
-          operator: "Equal"
-          value: "stable"
-          effect: "NoSchedule"
-        - key: "release"
-          operator: "Equal"
-          value: "stable"
-          effect: "NoExecute"
       containers:
         - image: busybox
           name: busybox
@@ -177,15 +131,6 @@ spec:
         lang: javascript
         release: stable
     spec:
-      tolerations:
-        - key: "release"
-          operator: "Equal"
-          value: "stable"
-          effect: "NoSchedule"
-        - key: "release"
-          operator: "Equal"
-          value: "stable"
-          effect: "NoExecute"
       containers:
         - image: busybox
           name: busybox
@@ -215,15 +160,6 @@ spec:
         lang: php
         release: stable
     spec:
-      tolerations:
-        - key: "release"
-          operator: "Equal"
-          value: "stable"
-          effect: "NoSchedule"
-        - key: "release"
-          operator: "Equal"
-          value: "stable"
-          effect: "NoExecute"
       containers:
         - image: busybox
           name: busybox

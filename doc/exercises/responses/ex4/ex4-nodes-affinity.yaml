@@ -5,6 +5,8 @@ metadata:
   name: worker-1
   labels:
     release: alpha
+spec:
+  taints: []
 
 ---
 apiVersion: v1
@@ -13,6 +15,8 @@ metadata:
   name: worker-2
   labels:
     release: beta
+spec:
+  taints: []
 
 ---
 apiVersion: v1
@@ -21,6 +25,8 @@ metadata:
   name: worker-3
   labels:
     release: stable
+spec:
+  taints: []
 
 ---
 apiVersion: apps/v1

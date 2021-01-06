@@ -13,14 +13,15 @@ After deploying the resources, anwser those questions:
 - How many pods are in `production`?
 - What is the name of the `front-end` pods in `dev`?
 - What is the name of the `back-end` pods in `prod`?   
+
 [:bulb: response](responses/ex4/ex4-labels-selectors.md)
 
 
 ### Exercise 4.2 - Taints and Toleration
 Add taints and toleration to nodes and pods so:
 
-- The Worker node 1 only accept pods with `alpha` release. 
-- The Worker node 2 only accept pods with `beta` release. 
-- The Worker node 3 only accept pods with `stable` release.   
+- The node worker-1 only accept pods with `alpha` release. 
+- The node worker-2 only accept pods with `beta` release. 
+- The node worker-3 only accept pods with `stable` release.   
 
 [:bulb: response](responses/ex4/ex4-taints-toleration.yaml)

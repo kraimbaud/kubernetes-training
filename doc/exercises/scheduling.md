@@ -16,7 +16,10 @@ After deploying the resources, anwser those questions:
 [:bulb: response](responses/ex4/ex4-labels-selectors.md)
 
 
-### Exercise 4.2 - Taints and toleration
+### Exercise 4.2 - Taints and Toleration
+Add taints and toleration to nodes and pods so:
 
-[:bulb: response](responses/ex4/ex4-taints-toleration.md)
-
+- The Worker node 1 only accept pods with `alpha` release. 
+- The Worker node 2 only accept pods with `beta` release. 
+- The Worker node 3 only accept pods with `stable` release.
+[:bulb: response](responses/ex4/ex4-taints-toleration.yaml)

@@ -1,0 +1,232 @@
+---
+apiVersion: v1
+kind: Node
+metadata:
+  name: worker-1
+spec:
+  taints:
+    - effect: NoExecute
+      key: release
+      value: alpha
+    - effect: NoSchedule
+      key: release
+      value: alpha
+
+---
+apiVersion: v1
+kind: Node
+metadata:
+  name: worker-2
+spec:
+  taints:
+    - effect: NoExecute
+      key: release
+      value: beta
+    - effect: NoSchedule
+      key: release
+      value: beta
+
+---
+apiVersion: v1
+kind: Node
+metadata:
+  name: worker-3
+spec:
+  taints:
+    - effect: NoExecute
+      key: release
+      value: stable
+    - effect: NoSchedule
+      key: release
+      value: stable
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: n4
+  name: app-1
+  labels:
+    name: app-1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: app-1
+  template:
+    metadata:
+      labels:
+        name: app-1
+        env: dev
+        app: front-end
+        lang: javascript
+        release: beta
+    spec:
+      tolerations:
+        - key: "release"
+          operator: "Equal"
+          value: "beta"
+          effect: "NoSchedule"
+        - key: "release"
+          operator: "Equal"
+          value: "beta"
+          effect: "NoExecute"
+
+      containers:
+        - image: busybox
+          name: busybox
+          args:
+            - sleep
+            - "1000000"
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: n4
+  name: app-2
+  labels:
+    name: app-2
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: app-2
+  template:
+    metadata:
+      labels:
+        name: app-2
+        env: dev
+        app: back-end
+        lang: python
+        release: alpha
+    spec:
+      tolerations:
+        - key: "release"
+          operator: "Equal"
+          value: "alpha"
+          effect: "NoSchedule"
+        - key: "release"
+          operator: "Equal"
+          value: "alpha"
+          effect: "NoExecute"
+      containers:
+        - image: busybox
+          name: busybox
+          args:
+            - sleep
+            - "1000000"
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: n4
+  name: app-3
+  labels:
+    name: app-3
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: app-3
+  template:
+    metadata:
+      labels:
+        name: app-3
+        env: prod
+        app: front-end
+        lang: javascript
+        release: stable
+    spec:
+      tolerations:
+        - key: "release"
+          operator: "Equal"
+          value: "stable"
+          effect: "NoSchedule"
+        - key: "release"
+          operator: "Equal"
+          value: "stable"
+          effect: "NoExecute"
+      containers:
+        - image: busybox
+          name: busybox
+          args:
+            - sleep
+            - "1000000"
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: n4
+  name: app-4
+  labels:
+    name: app-4
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: app-4
+  template:
+    metadata:
+      labels:
+        name: app-4
+        env: prod
+        app: front-end
+        lang: javascript
+        release: stable
+    spec:
+      tolerations:
+        - key: "release"
+          operator: "Equal"
+          value: "stable"
+          effect: "NoSchedule"
+        - key: "release"
+          operator: "Equal"
+          value: "stable"
+          effect: "NoExecute"
+      containers:
+        - image: busybox
+          name: busybox
+          args:
+            - sleep
+            - "1000000"
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: n4
+  name: app-5
+  labels:
+    name: app-5
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: app-5
+  template:
+    metadata:
+      labels:
+        name: app-5
+        env: prod
+        app: back-end
+        lang: php
+        release: stable
+    spec:
+      tolerations:
+        - key: "release"
+          operator: "Equal"
+          value: "stable"
+          effect: "NoSchedule"
+        - key: "release"
+          operator: "Equal"
+          value: "stable"
+          effect: "NoExecute"
+      containers:
+        - image: busybox
+          name: busybox
+          args:
+            - sleep
+            - "1000000"

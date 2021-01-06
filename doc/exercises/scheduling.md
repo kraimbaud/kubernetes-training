@@ -25,3 +25,12 @@ Add taints and toleration to nodes and pods so:
 - The node `worker-3` only accept pods with `stable` **release**.   
 
 [:bulb: response](responses/ex4/ex4-taints-toleration.yaml)
+
+### Exercise 4.3 - Nodes Affinity
+Do the same with Node Affinity by adding affinity to nodes so:
+
+- The node `worker-1` only accept pods with `alpha` **release**. 
+- The node `worker-2` only accept pods with `beta` **release**. 
+- The node `worker-3` only accept pods with `stable` **release**.   
+
+[:bulb: response](responses/ex4/ex4-nodes-affinity.yaml)

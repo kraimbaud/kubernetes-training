@@ -40,6 +40,6 @@ Delete all resource in namespace `n4` and deploy this objects in your K8s cluste
 
     kubectl apply -f https://raw.githubusercontent.com/kraimbaud/kubernetes-training/main/doc/exercises/resources/ex4-resource-limit.yaml
 
-
+The pod `stress` is not running. Checkout why and fix the problem.   
 
 [:bulb: response](responses/ex4/ex4-resources.yaml)

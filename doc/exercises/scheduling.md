@@ -36,7 +36,7 @@ Do the same with Node Affinity by adding affinity to nodes so:
 [:bulb: response](responses/ex4/ex4-nodes-affinity.yaml)
 
 ### Exercise 4.4 - Managing Resources for Containers
-Delete all resource in namespace `n4` and deploy this objects in your K8s cluster.
+Deploy this new object in `n4` namespace.
 
     kubectl apply -f https://raw.githubusercontent.com/kraimbaud/kubernetes-training/main/doc/exercises/resources/ex4-resource-limit.yaml
 
